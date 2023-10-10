@@ -29,9 +29,8 @@ const App = () => {
       <ContactForm />
       <Footer />
       <Cndi/>
+      
       <Childpass title="passing data from parent to child" des="This is just a discription" />
-      <Objpass item={Itemobj}/>
-      <Functionpass ChildBtnClick={BtnClick}/>
 
 
 
