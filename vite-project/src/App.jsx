@@ -4,11 +4,23 @@ import Hero from "./component/Hero";
 import Footer from "./component/footer";
 import Cndi from "./component/Cndi";
 import Childpass from "./component/Childpass";
+import Objpass from "./component/Objpass";
+import Functionpass from "./component/Functionpass";
 
 
 const App = () => {
   let marks = 20;
   const city = ["dhaka", "london", "kolkata", "delhi"];
+  const Itemobj={
+    name:'Nazmul Hossain',
+    age:21,
+    city:'Dhaka'
+
+  }
+
+  const BtnClick=()=>{
+    alert("Hallow there!");
+  }
 
   return (
     <div>
@@ -18,6 +30,8 @@ const App = () => {
       <Footer />
       <Cndi/>
       <Childpass title="passing data from parent to child" des="This is just a discription" />
+      <Objpass item={Itemobj}/>
+      <Functionpass ChildBtnClick={BtnClick}/>
 
 
 
