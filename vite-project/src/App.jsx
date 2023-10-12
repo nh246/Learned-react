@@ -6,21 +6,24 @@ import Cndi from "./component/Cndi";
 import Childpass from "./component/Childpass";
 import Objpass from "./component/Objpass";
 import Functionpass from "./component/Functionpass";
-
+import Hooks from "./component/Hooks";
 
 const App = () => {
   let marks = 20;
   const city = ["dhaka", "london", "kolkata", "delhi"];
-  const Itemobj={
-    name:'Nazmul Hossain',
-    age:21,
-    city:'Dhaka'
+  const Itemobj = {
+    name: "Nazmul Hossain",
+    age: 21,
+    city: "Dhaka",
+  };
 
-  }
-
-  const BtnClick=()=>{
+  const BtnClick = () => {
     alert("Hallow there!");
-  }
+  };
+
+  const PostFromData = (event) => {
+    event.preventDEfaolt();
+  };
 
   return (
     <div>
@@ -28,12 +31,13 @@ const App = () => {
       <Hero />
       <ContactForm />
       <Footer />
-      <Cndi/>
-      
-      <Childpass title="passing data from parent to child" des="This is just a discription" />
+      <Cndi />
+      <Hooks/>
 
-
-
+      <Childpass
+        title="passing data from parent to child"
+        des="This is just a discription"
+      />
 
       {/* This is inline if else  */}
       <div className="inline-if-else">
@@ -63,6 +67,14 @@ const App = () => {
             return <li key={i.toString()}>{item}</li>;
           })}
         </ol>
+      </div>
+      {/* From submit */}
+      <div className="Fromsubmiut">
+        <h1>From submuit</h1>
+        <form onSubmit={PostFromData}>
+          <input placeholder="name" />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   );
