@@ -7,6 +7,8 @@ import Childpass from "./component/Childpass";
 import Objpass from "./component/Objpass";
 import Functionpass from "./component/Functionpass";
 import Hooks from "./component/Hooks";
+import MutableValue from './component/MutableValue';
+import Caching from './component/Caching';
 
 const App = () => {
   let marks = 20;
@@ -31,8 +33,10 @@ const App = () => {
       <Hero />
       <ContactForm />
       <Footer />
+      <MutableValue/>
       <Cndi />
       <Hooks/>
+      <Caching/>
 
       <Childpass
         title="passing data from parent to child"
