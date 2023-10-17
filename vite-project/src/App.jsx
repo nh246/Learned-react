@@ -9,6 +9,7 @@ import Functionpass from "./component/Functionpass";
 import Hooks from "./component/Hooks";
 import MutableValue from './component/MutableValue';
 import Caching from './component/Caching';
+import TodoApp from "./component/TodoApp";
 
 const App = () => {
   let marks = 20;
@@ -33,6 +34,7 @@ const App = () => {
       <Hero />
       <ContactForm />
       <Footer />
+      <TodoApp/>
       <MutableValue/>
       <Cndi />
       <Hooks/>
