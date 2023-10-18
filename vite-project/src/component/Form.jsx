@@ -29,12 +29,9 @@ const Form = () => {
           <option value="Rangpur">Rangpur</option>
         </select>
         <br />
-        <input checked={FormObj.gender==="Male"}type="radio" name="gender">
-          Male
-        </input>
-        <input checked={FormObj.gender==="Female"} type="radio" name="gender">
-          Female
-        </input>
+        <input checked={FormObj.gender==="Male"}type="radio" name="gender"/> Male 
+        <input checked={FormObj.gender==="Female"} type="radio" name="gender"/> Female
+   
         <br />
         <button type="submit">Submit</button>
       </form>
