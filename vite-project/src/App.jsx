@@ -10,6 +10,7 @@ import Hooks from "./component/Hooks";
 import MutableValue from './component/MutableValue';
 import Caching from './component/Caching';
 import TodoApp from "./component/TodoApp";
+import Form from "./component/Form";
 
 const App = () => {
   let marks = 20;
@@ -35,6 +36,7 @@ const App = () => {
       <ContactForm />
       <Footer />
       <TodoApp/>
+      <Form/>
       <MutableValue/>
       <Cndi />
       <Hooks/>

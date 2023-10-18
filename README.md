@@ -1,4 +1,4 @@
 # Learned-react
 This is my react js learning journey
 
-V- 4:32:00
+V-5:01:00
