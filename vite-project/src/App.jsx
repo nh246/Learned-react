@@ -11,10 +11,10 @@ import MutableValue from './component/MutableValue';
 import Caching from './component/Caching';
 import TodoApp from "./component/TodoApp";
 import Form from "./component/Form";
-import {BrowswerRouter, Route, Router, Routes} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ProductPage from "./pages/ProductPage";
-import NotFound from "./pages/NotFound";
+// import {BrowswerRouter, Route, Router, Routes} from "react-router-dom";
+// import HomePage from "./pages/HomePage";
+// import ProductPage from "./pages/ProductPage";
+// import NotFound from "./pages/NotFound";
 
 
 
@@ -47,7 +47,7 @@ const App = () => {
       <Cndi />
       <Hooks/>
       <Caching/>
-      <BrowswerRouter>
+      {/* <BrowswerRouter>
       <Routes>
         <Route path="/Learned-react/vite-project/src/pages/HomePage.jsx" element={<HomePage/>} />
         <Route path="/Learned-react/vite-project/src/pages/ProductPage.jsx" element={<ProductPage/>} />
@@ -55,7 +55,7 @@ const App = () => {
 
         
       </Routes>
-      </BrowswerRouter>
+      </BrowswerRouter> */}
 
       <Childpass
         title="passing data from parent to child"
