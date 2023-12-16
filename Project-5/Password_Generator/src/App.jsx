@@ -8,7 +8,8 @@ function App() {
   const [charAllowed, setcarAllowed] = useState(false);
   const [password, setpassword] = useState("");
 
-  const [fun , ]
+  const useCallback =(fun , [length,numberAllowed,charAllowed,setpassword]);
+  
 
   return (
 <div
