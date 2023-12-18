@@ -1,4 +1,4 @@
-import { useState,useCallback } from "react"
+import { useState,useCallback, useRef } from "react"
 
 
 function App() {
@@ -8,7 +8,18 @@ function App() {
   const [charAllowed, setcarAllowed] = useState(false);
   const [password, setpassword] = useState("");
 
-  const useCallback =(fun , [length,numberAllowed,charAllowed,setpassword]);
+  const passwordRef = useRef(null);
+
+
+
+
+  const useCallback =(() => {
+    let pass="";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" ;
+    
+
+
+  }, [length,numberAllowed,charAllowed,setpassword]);
   
 
   return (
