@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 
 function App() {
   const [length, setlength] = useState(8);
@@ -22,6 +22,15 @@ function App() {
     }
   }, [length, numberAllowed, charAllowed, setpassword]);
 
+  const copyPasswordToClipboard = useCallback(() => {
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, length);
+    window.navigator.clipboard.writeText(password);
+  }, [password,length]);
+
+  useEffect(() => {
+    passwordGenerator();
+  }, [length, charAllowed, numberAllowed, passwordGenerator]);
   return (
     <div
       // Main div
@@ -38,9 +47,13 @@ function App() {
           className="outline-none w-full py-1 px-3"
           placeholder="Password"
           readOnly
+          ref={passwordRef}
         />
 
-        <button className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0">
+        <button
+          className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+          onClick={copyPasswordToClipboard}
+        >
           copy
         </button>
       </div>
@@ -64,11 +77,30 @@ function App() {
 
         {/* numberAllowed */}
 
-        <div
-        className="flex items-center gap-x-1"
-        >
-          
+        <div className="flex items-center gap-x-1">
+          <input
+            type="checkbox"
+            defaultChecked={numberAllowed}
+            id="numberInput"
+            onChange={() => {
+              setnumberAllowed((prev) => !prev);
+            }}
+          />
+          <label htmlFor="numberInput">Numbers</label>
+        </div>
 
+        {/* characterallowed  */}
+
+        <div className="flex items-center gap-x-1">
+          <input
+            type="checkbox"
+            defaultChecked={charAllowed}
+            id="characterInput"
+            onChange={() => {
+              setcarAllowed((prev) => !prev);
+            }}
+          />
+          <label htmlFor="characterInput">Characters</label>
         </div>
       </div>
     </div>
