@@ -1,56 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Righteous&display=swap");
 
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-:root{
-    --red: #d01c28;
-    --gray: #2e2e2e;
-  
+:root {
+  --red: #d01c28;
+  --gray: #2e2e2e;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    max-width: 1280px;
-    margin: 0px auto;
-    height: 72px;
-    align-items: center;
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0px auto;
+  height: 72px;
+  align-items: center;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
-    gap:24px;
+  display: flex;
+  list-style: none;
+  gap: 24px;
 }
 
-.login_btn{
+.login_btn {
+  all: unset;
+  padding: 0px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+}
+main {
 
-    all: unset;
-    padding: 6px 16px;
-    background: var(--red);
-    height: 32px;
-    color: white;
-    font-weight: 500;
+  display: flex;
+  /* background-color: aqua; */
+  padding-bottom: 91px;
+  align-items: center;
+  margin-top: 80px;
 }
-main{
-    display: flex;
-    width: 1125px;
-    height: 613px;
-    background-color: aqua;
-    align-items: center;
+.hero_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  margin-left: 160px;
 }
 
-.hero_container h1{
-    color: #000;
-    font-family: Poppins;
-    font-size: 108px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 102px;
+.hero_container h1 {
+  color: #000;
+  font-family: Poppins;
+
+  font-size: 95px;
+  font-style: normal;
+  font-weight: 800;
+
+  line-height: 84px;
+
 }
+.hero_container p {
+  width: 404px;
+  color: var(--GRAY, #5A5959);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-shadow: 0px 2px 2px  var(--gray);
+}
+
+.btn_Container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.btn_shop{
+  all: unset;
+  padding: 6px 18px;
+  background: var(--red);
+  /* height: 42px; */
+  margin: 2px 0;
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+}
+.btn_Category{
+  all: unset;
+  padding: 5px 18px;
+  /* background: var(--red); */
+  /* height: 42px; */
+  margin: 2px 0;
+  color:var(--gray);
+  font-weight: 600;
+  font-size: 28px;
+  border: 3px solid var(--gray)
+}
+
+.shopping p{
+  all: unset;
+  color: var(--gray);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.brand_images {
+  display: flex;
+  /* width: 32px;
+  height: 32px; */
+  justify-content: space-around;
+  margin: 2px 6px;
+}
+

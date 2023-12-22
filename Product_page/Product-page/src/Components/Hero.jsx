@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <main>
-      <div id="hero_container">
+      <div className="hero_container">
         <h1>YOUR FEET DESERVE THE BEST</h1>
         <p>YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.</p>
 
@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="shopping"> 
         <p>Also Available On</p>
 
-        <div id="brand_images">
+        <div className="brand_images">
             <img src="Images/flipkart.png"/>
             <img src="Images/amazon.png"/>
 
