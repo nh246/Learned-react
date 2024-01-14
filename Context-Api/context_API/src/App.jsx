@@ -1,6 +1,8 @@
 
 import './App.css'
 import UserContextProvider from './context/UserContextProvider'
+import Login from './components/Login';
+import Profile from './components/Profile';
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
   return (
     <UserContextProvider>
 <h1>This is simple context</h1>
+  <Login/>
+  <Profile/>
     </UserContextProvider>
   )
 }
