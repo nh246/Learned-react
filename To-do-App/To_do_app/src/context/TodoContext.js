@@ -5,9 +5,9 @@ export const TodoContext = createContext({
     todos : [{
         id: 1,
         todo : "massage",
-        completed: false
+        completed: false,
     }],
-    addTodo: (todo) ={},
+    addTodo: (todo) =>{},
     updateTodo : (id , todo) =>{},
     deleteTodo : (id) => {},
     toggleComplete:(id)=> {}
