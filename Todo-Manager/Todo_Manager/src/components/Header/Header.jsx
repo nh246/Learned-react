@@ -7,7 +7,7 @@ function Header() {
             Todo <span className="text-sky-500 font-bold ">Manager</span>
           </h1>
         </div>
-        <nav className="flex space-4">
+        <nav className="flex space-4 gap-4 ">
           <ul className="flex bg-pink-400">
             <li>Add Task</li>
             <li>All Task</li>
