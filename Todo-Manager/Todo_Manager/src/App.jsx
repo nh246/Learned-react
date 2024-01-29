@@ -4,6 +4,8 @@ import './App.css'
 import Header from './components/Header/Header'
 import { TodoProvider } from './../../../To-do-App/To_do_app/src/context/TodoContext';
 import { useState } from 'react';
+import { useEffect } from 'react';
+import TodoFrom from './components/TodoFrom/TodoFrom';
 
 function App() {
 
@@ -33,9 +35,30 @@ function App() {
     setTodos((prev)=> prev.map((prevTodo)=> (prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed } : prevTodo)))
   }
 
+  // local storage getting data  
+
+  useEffect(()=>{
+    const todos = JSON.parse(localStorage.getItem("todos"))
+    console.log(todos)
+    if (todos && todos.length > 0) {
+      setTodos(todos)
+      console.log(todos)
+    }
+  },[])
+ // local storage adding data 
+  useEffect(()=>{
+    localStorage.setItem("todos", JSON.stringify(todos))
+  },[todos])
+
   return ( 
 <TodoProvider>
 <Header/>
+<div>
+  <h1>Manage todo items</h1>
+
+<TodoFrom/>
+ 
+</div>
 
 </TodoProvider>
   )
