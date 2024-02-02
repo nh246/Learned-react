@@ -1,3 +1,4 @@
+import { ReactTyped } from "react-typed";
 
 function Banner() {
   return (
@@ -8,7 +9,16 @@ function Banner() {
                 Learn with us 
             </div>
             <h2 className="text-white md:text-5xl text-3xl md:py-2 md:mt-3 mt-2">Grow with us.</h2>
-            <div className="text-white md:text-2xl md:py-3 mt-2 text-1xl">Learn </div>
+            <div className="text-white md:text-2xl md:py-3 mt-2 text-1xl">Learn
+            <ReactTyped
+            className="pl-1"
+             strings={["Web Development", "Digital Marketing" , "DEV Ops"]}
+             loop = {true}
+              typeSpeed={30} 
+              backSpeed={30}
+              />
+
+             </div>
         </div>
 
     </div>
