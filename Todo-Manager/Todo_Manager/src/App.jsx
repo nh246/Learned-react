@@ -2,7 +2,7 @@
 
 import './App.css'
 import Header from './components/Header/Header'
-import { TodoProvider } from './../../../To-do-App/To_do_app/src/context/TodoContext';
+import { TodoProvider } from './context';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import TodoFrom from './components/TodoFrom/TodoFrom';
