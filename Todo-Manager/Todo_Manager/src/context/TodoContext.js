@@ -8,13 +8,13 @@ const TodoContext = createContext(
                id:1,
                todo: "massage ",
                completed: false
-            },
+            }],
             addTodo: (todo)=>{},
             updateTodo: (id,todo)=>{},
             deleteTodo: (id)=>{},
             toggleCompleted: (id)=>{}
 
-        ]
+        
     }
 
 ) 
