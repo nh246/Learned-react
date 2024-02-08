@@ -3,7 +3,10 @@ import { useTodo } from "../context/TodoContext";
 
 function TodoForm() {
     
+
   const [todo, setTodo] = useState("")
+
+  // using destructuring methode to add todo  
   const {addTodo} = useTodo()
 
   const add = (e) => {

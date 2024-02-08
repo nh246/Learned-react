@@ -1,11 +1,12 @@
 
 
 import './App.css'
-import Header from './components/Header/Header'
+import Header from './components/Header'
 import { TodoProvider } from './context';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import TodoFrom from './components/TodoFrom/TodoFrom';
+import TodoFrom from './components/TodoFrom';
+import TodoItem from './components/TodoItem';
 
 function App() {
 
@@ -51,12 +52,13 @@ function App() {
   },[todos])
 
   return ( 
-<TodoProvider>
+<TodoProvider  value={{todos, addTodo, updateTodo, deleteTodo, toggleCompleted }}>
 <Header/>
 <div>
   <h1>Manage todo items</h1>
 
 <TodoFrom/>
+<TodoItem/>
  
 </div>
 

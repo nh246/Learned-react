@@ -6,22 +6,31 @@ import TodoForm from "./components/TodoFrom";
 
 
 function App() {
+
+  // state to hold all todos 
   const [todos, setTodos]= useState([])
+
+  // adding todos 
   const addTodo = (todo) =>{
     setTodos((prev)=>[{id: Date.now(), ...todo}, ...prev])
   }
+
+  // updating todos 
   const updateTodo = (id , todo) =>{
      setTodos((prev)=> prev.map((prevTodo) =>(prevTodo.id === id ? todo : prevTodo)))
   }
-
+  
+  // deleting todos 
   const deleteTodo = (id) =>{
     setTodos((prev)=> prev.filter((todo)=>todo.id !== id) )
   }
 
+  // complete toggle 
   const toggleComplete = (id) =>{
     setTodos((prev)=> prev.map((prevTodo)=> prevTodo.id === id ? {...prevTodo , completed: !prevTodo.completed} : prevTodo))
   }
-
+   
+  // getting data 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
 
@@ -30,6 +39,7 @@ function App() {
    }
   }, [])
 
+  // setting data 
   useEffect(()=>{
     localStorage.setItem("todos", JSON.stringify(todos))
   },[todos])
