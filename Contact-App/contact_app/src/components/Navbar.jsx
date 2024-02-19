@@ -1,7 +1,7 @@
 
 function Navbar() {
   return (
-    <div className="h-[60px] w-[360px] bg-white my-4 flex justify-center items-center rounded-md text-black font-semibold text-[20px]">
+    <div className="my-4 flex h-[60px] items-center justify-center gap-2 rounded-lg bg-white text-xl font-medium">
         Contact App
     </div>
   )

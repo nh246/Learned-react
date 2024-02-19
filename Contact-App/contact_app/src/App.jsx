@@ -8,14 +8,14 @@ function App() {
     <div className="max-w-[370px] mx-auto px-4">
       <Navbar />
       <div className='flex'>
-        <div className="flex relative items-center">
-          <LuSearch className="text-white text-3xl flex p-1 absolute" />
+        <div className="flex flex-grow relative items-center">
+          <LuSearch className="text-white text-3xl flex ml-1 absolute" />
           <input
             type="text"
-            className="h-10 flex-grow pl-7 pr-1 rounded-lg bg-transparent border-white border-2 text-white text-1xl "
+            className="h-10 flex-grow rounded-md border border-white bg-transparent pl-9 text-white"
           />
         </div>
-        <AiFillPlusCircle />
+        <AiFillPlusCircle className='text-5xl cursor-pointer text-white' />
       </div>
       {/* search bar  */}
     </div>
