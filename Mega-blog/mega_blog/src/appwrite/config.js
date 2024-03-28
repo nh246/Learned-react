@@ -1,6 +1,6 @@
 import conf from "../conf/conf";
 import { Client,ID , Databases,Storage,Query } from "appwrite";
-import User from './../../../../React_Router/react_router/src/components/User/User';
+
 
 export class Service{
     client = new Client();
