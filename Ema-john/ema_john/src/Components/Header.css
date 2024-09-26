@@ -1,0 +1,26 @@
+.header {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.header img {
+  height: 80px;
+}
+
+nav {
+  background: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 500;
+  text-align: start;
+}
+nav a {
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+}
+.pages:hover {
+  background: white;
+  color: black;
+}
