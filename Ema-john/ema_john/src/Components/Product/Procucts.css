@@ -18,4 +18,11 @@
     height: 30px;
     border: 1px solid darkgrey;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.buybtn:hover{
+    background-color:rgb(228, 211, 167) ;
+    
 }
