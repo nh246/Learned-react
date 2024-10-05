@@ -1,0 +1,64 @@
+{
+  "courses": [
+    {
+      "courseName": "Introduction to Python",
+      "price": 49.99,
+      "img": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "Learn the basics of Python programming, including syntax, data types, and control flow."
+    },
+    {
+      "courseName": "Web Development Bootcamp",
+      "price": 99.99,
+      "img": "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "A comprehensive course covering HTML, CSS, JavaScript, and backend development."
+    },
+    {
+      "courseName": "Data Science with R",
+      "price": 69.99,
+      "img": "https://images.unsplash.com/photo-1660616246653-e2c57d1077b9?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "An in-depth course on data analysis, visualization, and machine learning using R."
+    },
+    {
+      "courseName": "Digital Marketing Masterclass",
+      "price": 59.99,
+      "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "Learn the strategies and tools for successful digital marketing, including SEO, PPC, and social media."
+    },
+    {
+      "courseName": "Graphic Design Fundamentals",
+      "price": 39.99,
+      "img": "https://plus.unsplash.com/premium_photo-1661281312741-531b9e37b756?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "An introductory course on graphic design principles, tools, and techniques using Adobe Creative Suite."
+    },
+    {
+      "courseName": "Introduction to Machine Learning",
+      "price": 79.99,
+      "img": "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "A beginner's guide to machine learning concepts, algorithms, and applications."
+    },
+    {
+      "courseName": "Project Management Professional (PMP) Prep",
+      "price": 89.99,
+      "img": "https://plus.unsplash.com/premium_photo-1661782562303-b6839db30206?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "Prepare for the PMP certification with this comprehensive course covering all exam topics."
+    },
+    {
+      "courseName": "Cybersecurity Essentials",
+      "price": 69.99,
+      "img": "https://plus.unsplash.com/premium_photo-1701179596614-9c64f50cda76?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "Learn the fundamentals of cybersecurity, including threat detection, prevention, and response."
+    },
+    {
+      "courseName": "Mobile App Development with Flutter",
+      "price": 79.99,
+      "img": "https://plus.unsplash.com/premium_photo-1681487865280-c2b836dd83e8?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "Build cross-platform mobile applications using Flutter and Dart programming language."
+    },
+    {
+      "courseName": "Blockchain and Cryptocurrency",
+      "price": 89.99,
+      "img": "https://images.unsplash.com/photo-1640161704729-cbe966a08476?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "basicDetails": "Understand the technology behind blockchain and cryptocurrencies, including Bitcoin and Ethereum."
+    }
+  ]
+}
