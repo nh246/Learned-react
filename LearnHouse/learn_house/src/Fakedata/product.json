@@ -1,5 +1,4 @@
-{
-  "courses": [
+[
     {
       "courseName": "Introduction to Python",
       "price": 49.99,
@@ -61,4 +60,4 @@
       "basicDetails": "Understand the technology behind blockchain and cryptocurrencies, including Bitcoin and Ethereum."
     }
   ]
-}
+

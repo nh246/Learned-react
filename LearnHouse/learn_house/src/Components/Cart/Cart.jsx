@@ -1,9 +1,10 @@
-
-function Cart() {
+function Cart({ addprice ,addedcourse}) {
   return (
-    <div className='w-[30%] bg-red-500 p-4' >
-        Cart</div>
-  )
+    <div className="w-[30%] fixed top-10 p-4 h-full ">
+      <h3>Total Courses: {addedcourse}</h3>
+      <p>Total Price: ${addprice.toFixed(2)}</p>
+    </div>
+  );
 }
 
-export default Cart
+export default Cart;
