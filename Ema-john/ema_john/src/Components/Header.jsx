@@ -8,9 +8,9 @@ const Header = () => {
       <img src={logo} className="logo"></img>
 
       <nav>
-        <Link To="/shop" className="pages">Shop</Link>
-        <Link To="/review" className="pages">Order Review</Link>
-        <Link To="/manage" className="pages">Manage Inventory here</Link>
+        <Link to="/shop" className="pages">Shop</Link>
+        <Link to="/review" className="pages">Order Review</Link>
+        <Link to="/manage" className="pages">Manage Inventory here</Link>
       </nav>
     </div>
   );

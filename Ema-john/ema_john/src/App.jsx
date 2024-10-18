@@ -1,17 +1,39 @@
 import "./App.css";
-import Header from "./Components/Header";
+import Layout from "./Components/Layout";
+import NotFound from "./Components/Not Found/NotFound";
+import OrderReview from "./Components/Order Review/OrderReview";
 import Shop from "./Components/Shop/Shop";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "",
+      element: (
+        <div>
+          <Layout />
+          <Shop />
+        </div>
+      ),
+    },
+    {
+      path: "/review",
+      element: <OrderReview />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
+
   return (
     <>
-      <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          <Route path="/shop" ><Shop></Shop></Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </>
   );
 }
