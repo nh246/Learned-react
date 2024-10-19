@@ -2,39 +2,23 @@ import "./App.css";
 import Layout from "./Components/Layout";
 import NotFound from "./Components/Not Found/NotFound";
 import OrderReview from "./Components/Order Review/OrderReview";
+import ProductKey from "./Components/ProductKey/ProductKey";
 import Shop from "./Components/Shop/Shop";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "",
-      element: (
-        <div>
-          <Layout />
-          <Shop />
-        </div>
-      ),
-    },
-    {
-      path: "/review",
-      element: <OrderReview />,
-    },
-    {
-      path: "*",
-      element: <NotFound />,
-    },
-  ]);
-
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Shop />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="review" element={<OrderReview />} />
+          <Route path="product/:productKey" element={<ProductKey />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
