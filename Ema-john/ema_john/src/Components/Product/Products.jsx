@@ -4,7 +4,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
 function Products(props) {
 
-  // console.log(props.product.key)
+  // console.log(props)
   const { img, name, seller, price, stock ,key } = props.product;
   return (
     <div className="product">
@@ -27,7 +27,7 @@ function Products(props) {
         </p>
         {/* you need an arrow fumction if you want to pass any value with in an function parameter else it will execute automaticelly  */}
         
-        <button className="buybtn" onClick={()=> props.handleAddProduct(props.product)} ><FontAwesomeIcon icon={faCartShopping} /> add to cart</button>
+        {props.showAddToCart === true &&   <button className="buybtn" onClick={()=> props.handleAddProduct(props.product)} ><FontAwesomeIcon icon={faCartShopping} /> add to cart</button>}
       </div>
     </div>
   );

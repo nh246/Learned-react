@@ -1,4 +1,5 @@
 import "./Card.css";
+import { Link } from 'react-router-dom';
 function Card(props) {
   const cart = props.cart;
 
@@ -34,6 +35,8 @@ function Card(props) {
       </p>
       <p>Estimated Tax:{estimatedTax}</p>
       <p>Total price:{allTotal}</p>
+      <br/>
+      <Link to={"/review"} > <button className="buybtn" >Review Order</button> </Link>
     </div>
   );
 }

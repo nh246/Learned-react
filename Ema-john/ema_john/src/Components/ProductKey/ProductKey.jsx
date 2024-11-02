@@ -1,11 +1,14 @@
-
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import ProductDetails from "../Product  Details/ProductDetails";
 function ProductKey() {
-    const { productKey } = useParams();  return (
+  const { productKey } = useParams();
+
+
+  return (
     <div>
-       <h1>This is the product key {productKey}</h1>
+      <ProductDetails productKey={productKey}></ProductDetails>
     </div>
-  )
+  );
 }
 
-export default ProductKey
+export default ProductKey;

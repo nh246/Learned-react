@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Shop.css";
 import Products from "../Product/Products";
 import Card from "../Card/Card"
+import { addToDb } from "../../utilities/databaseManager";
 
 const Shop = () => {
   const first10 = fakeData.slice(0, 10);
@@ -12,6 +13,7 @@ const Shop = () => {
   const handleAddProduct = (product) => {
     const newCart = [...cart,product]
     setCart(newCart);
+    addToDb(product.key , 1);
   };
 
   return (
@@ -21,7 +23,8 @@ const Shop = () => {
         {products.map((pdata) => (
           <Products
             // sending the handleAddProduct function with props
-
+            key={pdata.key}
+            showAddToCart={true}
             handleAddProduct={handleAddProduct}
             product={pdata}
           ></Products>
