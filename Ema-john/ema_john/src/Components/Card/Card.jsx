@@ -1,9 +1,8 @@
 import "./Card.css";
-import { Link } from 'react-router-dom';
 function Card(props) {
   const cart = props.cart;
 
-  const total = cart.reduce((total, prd) => total + prd.price, 0);
+  const total = cart.reduce((total, prd) => total + prd.price * prd.quantity, 0);
   // or
   //let total = 0;
   // for(let i =0; i<cart.length ; i++ ){
@@ -36,7 +35,9 @@ function Card(props) {
       <p>Estimated Tax:{estimatedTax}</p>
       <p>Total price:{allTotal}</p>
       <br/>
-      <Link to={"/review"} > <button className="buybtn" >Review Order</button> </Link>
+      {
+        props.children
+      }
     </div>
   );
 }
