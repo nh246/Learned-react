@@ -1,22 +1,13 @@
-import { useEffect } from "react";
-import "./App.css";
-import Header from "./components/header/Header";
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import PostDetail from './components/PostDetail';
 
 function App() {
-
-  useEffect(()=>{
-    
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => response.json())
-      .then(data => console.log(data))
-
-  },[])
-
-
   return (
-    <>
-    <Header></Header>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/post/:id" element={<PostDetail />} />
+    </Routes>
   );
 }
 
