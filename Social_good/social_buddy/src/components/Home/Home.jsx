@@ -1,17 +1,17 @@
+// src/components/Home.jsx
 import { useEffect, useState } from "react";
-import Post from "../Post/Post";
+import Post from "./Post";
 
 function Home() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const basUrl = "https://jsonplaceholder.typicode.com/posts";
+    const baseUrl = "https://jsonplaceholder.typicode.com/posts";
 
-    fetch(basUrl)
+    fetch(baseUrl)
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, []);
-
 
   return (
     <div>

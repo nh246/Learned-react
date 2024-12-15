@@ -1,8 +1,10 @@
-
-function Comment() {
+const Comment = (props) => {
+  const { name, email } = props.comment;
   return (
-    <div>Comment</div>
-  )
-}
+    <p>
+      {name}: {email}
+    </p>
+  );
+};
 
-export default Comment
+export default Comment;
