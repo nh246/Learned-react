@@ -21,7 +21,7 @@ function Home() {
       {posts.map((post) => (
         <Posts key={post.id} post={post} />
       ))}
-        <Comment />
+      
     </div>
   );
 }

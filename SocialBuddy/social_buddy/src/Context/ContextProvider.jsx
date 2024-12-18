@@ -13,6 +13,9 @@ const ContextProvider = ({ children }) => {
       .then((data) => setComments(data));
   }, [postId]);
 
+
+  // postdetails 
+
   return (
     <MyContext.Provider value={{ postId, setPostId, comments }}>
       {children}

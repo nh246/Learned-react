@@ -1,7 +1,5 @@
-// import { useContext } from "react";
-// import MyContext from "../../Context/context";
+
 function PostDetails() {
-// const {comments} = useContext(MyContext);
 
   return (
     <div>
