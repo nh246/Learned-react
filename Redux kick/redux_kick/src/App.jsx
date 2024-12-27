@@ -1,9 +1,12 @@
 import "./App.css";
+import Cart from "./Componenets/Cart/Cart";
+import Shop from "./Componenets/Shop/Shop";
 
 function App() {
   return (
     <>
-      <h1>This us redux time.</h1>
+      <Shop/>
+      <Cart/>
     </>
   );
 }
