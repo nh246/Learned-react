@@ -1,4 +1,6 @@
 import { Link } from "react-router"
+import Logout from "./components/Logout"
+import AuthState from "./components/AuthState"
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
           <li><Link to="/login" className="px-6 py-2 bg-blue-500 text-white hover:bg-blue-700 rounded" >Login</Link></li>
         </ul>
       </nav>
+      <Logout/>
+      <AuthState/>
     </div>
   )
 }
