@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { FacebookAuthProvider, getAuth, GithubAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { GoogleAuthProvider } from "firebase/auth";
+import app from "../firebase/firebase.config";
 
 function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const auth = getAuth();
+  const auth = getAuth(app);
 
   const [error, setError] = useState("");
 
@@ -35,6 +37,70 @@ function Login() {
     setError("please input correct email and password");
   });
   };
+
+  // handleGoogleLogin
+
+  const handleGoogleLogin = ()=>{
+    // console.log("google login")
+
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+    
+  .then((result) => {
+    const user = result.user;
+  console.log("google login successful ",user)
+  navigate("/");
+  }).catch((error) => {
+    console.log("google login failed",error);
+  });
+  }
+
+  //handleFacebookLogin
+
+  const handleFacebookLogin =()=>{
+    // console.log("facebook is clicked")
+
+    const provider = new FacebookAuthProvider();
+
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    // The signed-in user info.
+    const user = result.user;
+
+    console.log("facebook login successful ",user)
+    navigate("/");
+  })
+  .catch((error) => {
+    console.log("facebook login failed",error);
+  });
+
+  }
+
+  //handleGithubLogin
+
+  const handleGithubLogin = ()=>{
+    // console.log("github login")
+
+    const githubProvider = new GithubAuthProvider();
+
+    signInWithPopup(auth, githubProvider)
+  .then((result) => {
+
+    const user = result.user;
+
+    console.log("github login successful ",user)
+    navigate("/");
+   
+  }).catch((error) => {
+    // Handle Errors here.
+    console.log("this is error",error);
+  });
+
+
+
+  }
+
 
 
   return (
@@ -93,9 +159,9 @@ function Login() {
       <div className="text-center space-y-4" >
         <p className="text-center text-gray-600 text-sm" >Or login with</p>
         <div className="flex justify-center space-x-4">
-          <button className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-red-500 hover:bg-red-600"><FaGoogle /><span>Google</span></button>
-          <button className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-blue-500 hover:bg-blue-600" ><FaFacebook /><span>Facebook</span></button>
-          <button className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-gray-800 hover:bg-gray-900" ><FaGithub /><span>Github</span></button>
+          <button onClick={handleGoogleLogin} className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-red-500 hover:bg-red-600"><FaGoogle /><span>Google</span></button>
+          <button onClick={handleFacebookLogin} className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-blue-500 hover:bg-blue-600" ><FaFacebook /><span>Facebook</span></button>
+          <button onClick={handleGithubLogin} className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-gray-800 hover:bg-gray-900" ><FaGithub /><span>Github</span></button>
         </div>
       </div>
 

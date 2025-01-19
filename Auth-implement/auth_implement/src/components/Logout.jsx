@@ -1,9 +1,11 @@
 import { getAuth, signOut } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import { useAuth } from "../context/AuthContext";
 
 function Logout() {
-    const auth = getAuth(app);
+  const {currentUser} = useAuth()
 
+    const auth = getAuth(app);
     const handleLogout = () =>{
         // console.log("logout button clicked");
         signOut(auth).then(() => {
