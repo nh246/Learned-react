@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 
 function Login() {
 
@@ -42,6 +43,8 @@ function Login() {
       <h2 className="text-2xl font-bold text-center text-gray-800">
         Please Login
       </h2>
+
+      {/* login form  */}
       <form onSubmit={handleLogin} className="space-y-4">
         <div>
           <label className="block text-gray-600 font-medium text-sm mb-2">
@@ -84,6 +87,19 @@ function Login() {
         </button>
       </form>
 
+      {/* social login  */}
+
+
+      <div className="text-center space-y-4" >
+        <p className="text-center text-gray-600 text-sm" >Or login with</p>
+        <div className="flex justify-center space-x-4">
+          <button className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-red-500 hover:bg-red-600"><FaGoogle /><span>Google</span></button>
+          <button className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-blue-500 hover:bg-blue-600" ><FaFacebook /><span>Facebook</span></button>
+          <button className="flex items-center px-4 py-2 space-x-2 text-white rounded bg-gray-800 hover:bg-gray-900" ><FaGithub /><span>Github</span></button>
+        </div>
+      </div>
+
+      {/* auth text  */}
       <p className="text-center text-gray-600 text-sm mt-2">
         Do not have an account? Please
         <Link to="/register" className="text-blue-600 hover:underline">
