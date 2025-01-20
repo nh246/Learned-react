@@ -22,7 +22,7 @@ function Logout() {
 
   return (
     <div className="my-8">
-      <p className="font-semibold mb-2">User: {currentUser?.displayName}</p>
+      <p className="font-semibold mb-2">User: {currentUser?.displayName || "Not set yet"}</p>
       <button
         onClick={handleLogout}
         className="px-5 py-2 bg-red-600 text-white font-semibold rounded"

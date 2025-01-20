@@ -149,7 +149,7 @@ function Login() {
           type="submit"
           className="w-full py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600"
         >
-          SignUp
+          Sign In
         </button>
       </form>
 

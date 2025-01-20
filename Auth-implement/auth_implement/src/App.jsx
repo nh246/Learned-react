@@ -39,6 +39,14 @@ function App() {
               UserProfile
             </Link>
           </li>
+          <li>
+            <Link
+              to="/resetPassword"
+              className="px-6 py-2 bg-blue-500 text-white hover:bg-blue-700 rounded"
+            >
+              Reset Password
+            </Link>
+          </li>
         </ul>
       </nav>
       <Logout />

@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import app from "./../firebase/firebase.config";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
-
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const[ massage, setMassage] = useState("");
   // console.log(email,password);
   const navigate = useNavigate();
 
   const auth = getAuth(app);
 
+  // handle registration
   const handleRegister = (e) => {
     e.preventDefault();
 
@@ -20,8 +21,26 @@ function Register() {
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
-        alert("registration success");
-        navigate("/login");
+
+        sendEmailVerification(user)
+        .then(() => {
+
+          // Email verification sent!
+          setMassage("Registration successfull and a verification email is sent to your email");
+          // ...
+          console.log("email verification sent", user.email);
+        })
+        .catch((error) => {
+          console.log("erron in varification sending",error.massage);
+        })
+
+        // optional for navigating 
+
+        setTimeout(() => {
+          alert("registration success");
+          navigate("/login");
+        }, 5000)
+       
         // console.log(user);
         // ...
       })
@@ -37,6 +56,11 @@ function Register() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 ">
       <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+        {
+          massage && <h2 className="text-2xl font-bold text-center text-gray-800">
+          {massage}
+        </h2>
+        }
         <h2 className="text-2xl font-bold text-center text-gray-800">
           Please Register
         </h2>
