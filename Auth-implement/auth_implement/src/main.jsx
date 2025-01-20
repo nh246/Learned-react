@@ -13,6 +13,7 @@ import UpdateProfile from "./components/UpdateProfile.jsx";
 import UpdatePassword from "./components/UpdatePassword.jsx";
 import SendPasswordResetEmail from "./components/SendPasswordResetEmail.jsx";
 import SendSignInLink from "./components/Passwordless/SendSignInLink.jsx";
+import FinishSignIn from "./components/Passwordless/FinishSignIn.jsx";
 
 createRoot(document.getElementById("root")).render(
   <AuthProvider>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/password-less-signin" element={<SendSignInLink />} />
+        <Route path="/finished-sign-up" element={<FinishSignIn />} />
         <Route
           path="/dashboard"
           element={

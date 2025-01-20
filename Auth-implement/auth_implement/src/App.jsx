@@ -47,6 +47,14 @@ function App() {
               Reset Password
             </Link>
           </li>
+          <li>
+            <Link
+              to="/password-less-signin"
+              className="px-6 py-2 bg-blue-500 text-white hover:bg-blue-700 rounded"
+            >
+              PasswordLess SignIn
+            </Link>
+          </li>
         </ul>
       </nav>
       <Logout />
