@@ -12,7 +12,7 @@ function AuthState() {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         // const uid = currentUser.uid;
-        console.log(currentUser);
+        // console.log(currentUser);
         setUser(currentUser);
 
         // console.log(uid);

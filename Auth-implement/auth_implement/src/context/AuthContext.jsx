@@ -3,15 +3,21 @@ import { createContext, useContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
 
 const AuthContext = createContext();
-const auth = getAuth(app);
-export const useAuth =()=> useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);
 
-export const AuthProvider = ({ childern }) => {
-    const [currentUser, setCurrentUser] = useState();
+const auth = getAuth(app);
+
+export const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState();
+  const [loading, setLoading] = useState(true);
+
+
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setLoading(false);
       if (user) {
-        console.log("auth provider user", user);
+        // console.log("auth provider user", user);
         setCurrentUser(user);
       }
     });
@@ -19,7 +25,6 @@ export const AuthProvider = ({ childern }) => {
     return () => unsubscribe();
   }, [auth]);
 
-  
-  const value = {currentUser};
-  return <AuthContext.Provider value={value}>{childern}</AuthContext.Provider>;
+  const value = { currentUser ,loading};
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
