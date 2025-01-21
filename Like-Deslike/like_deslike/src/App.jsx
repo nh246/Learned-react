@@ -1,7 +1,10 @@
+import LikeDislike from "./components/LikeDislike"
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <LikeDislike/>
+    </div>
   )
 }
 
